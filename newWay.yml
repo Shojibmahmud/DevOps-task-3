@@ -1,0 +1,30 @@
+openapi: 3.0.0
+info:
+  title: "New way"
+  version: "1.0.0"
+tags:
+- name: "date"
+paths:
+  "/":
+    get:
+      tags:
+      - "date"
+      summary: "rate this"
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  Date:
+                    type: string
+                    description: The current date.
+                    example: '19 December 2020'
+                  User-Agent:
+                    type: string
+                    description: The current user agent.
+                    example: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) 
+                    AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 
+                    Safari/537.36"
